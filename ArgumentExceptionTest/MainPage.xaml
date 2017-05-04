@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="ArgumentExceptionTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ArgumentExceptionTest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <local:ViewModel />
+    </Page.DataContext>
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button
+            x:Name="Lanuch"
+            Click="Lanuch_Click"
+            Content="ClickMe" />
+        <local:CustomUserControl ActiveInteractionMode="{Binding Path=Model}" />
+    </StackPanel>
+</Page>
